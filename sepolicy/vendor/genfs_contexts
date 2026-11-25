@@ -1,0 +1,1 @@
+genfscon sysfs /bus/platform/drivers/ext_key_plat_driver/channel u:object_r:sysfs_knob:s0

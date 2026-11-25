@@ -1,0 +1,220 @@
+on post-fs
+	mkdir /data/intercom 0777 system system
+    chown system system /dev/ttyS0
+    chown system system /dev/ttyS1
+    chown system system /dev/tty*
+    chmod 0777  /dev/ttyS0
+    chmod 0777  /dev/ttyS1
+    chmod 0666  /dev/tty*
+    chmod 0777 /dev/intercom_device
+    chmod 0777 /vendor/bin/ff_ta.elf
+	chown system system /sys/devices/platform/intercom/hw_pd
+	chown system system /sys/devices/platform/intercom/bt_ptt
+	chown system system /sys/devices/platform/intercom/uart_sw
+	chown system system /sys/devices/platform/intercom/mic_sw
+	chown system system /sys/devices/platform/intercom/sys_wake_ptt
+	chown system system /sys/devices/platform/intercom/uart_power
+	chown system system /sys/bus/iio/devices/iio:device2/power_enable
+
+	chmod 0666 /sys/devices/platform/intercom/hw_pd
+	chmod 0666 /sys/devices/platform/intercom/bt_ptt
+	chmod 0666 /sys/devices/platform/intercom/uart_sw
+	chmod 0666 /sys/devices/platform/intercom/mic_sw
+	chmod 0666 /sys/devices/platform/intercom/sys_wake_ptt
+	chmod 0666 /sys/devices/platform/intercom/uart_power
+	chmod 0666 /sys/bus/iio/devices/iio:device2/power_enable
+
+	chown system system /sys/class/leds/red/trigger
+	chown system system /sys/class/leds/green/trigger
+	chown system system /sys/class/leds/blue/trigger
+	chown system system /sys/class/leds/red/brightness
+	chown system system /sys/class/leds/green/brightness
+	chown system system /sys/class/leds/blue/brightness
+	chown system system /sys/class/leds/red/delay_on
+	chown system system /sys/class/leds/green/delay_on
+	chown system system /sys/class/leds/blue/delay_on
+	chown system system /sys/class/leds/red/delay_off
+	chown system system /sys/class/leds/green/delay_off
+	chown system system /sys/class/leds/blue/delay_off
+
+	chmod 0664 /sys/class/leds/red/trigger
+	chmod 0664 /sys/class/leds/green/trigger
+	chmod 0777 /sys/class/leds/blue/trigger
+	chmod 0664 /sys/class/leds/red/brightness
+	chmod 0664 /sys/class/leds/green/brightness
+	chmod 0777 /sys/class/leds/blue/brightness
+	chmod 0664 /sys/class/leds/red/delay_on
+	chmod 0664 /sys/class/leds/green/delay_on
+	chmod 0664 /sys/class/leds/blue/delay_on
+	chmod 0664 /sys/class/leds/red/delay_off
+	chmod 0664 /sys/class/leds/green/delay_off
+	chmod 0664 /sys/class/leds/blue/delay_off
+	
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio2
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio15
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio3
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio4
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio13
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio17
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio19
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio20
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio26
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio52
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio54
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio68
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio69
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio74
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio77
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio78
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio85
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio86
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio87
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio88
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio150
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio153
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio159
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio160
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio165
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio169
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio163
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio164
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio166
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio152
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio80
+	chown system system /sys/bus/platform/drivers/intercom_driver/intercom/mic_power
+	chown system system /sys/bus/platform/drivers/intercom_driver/intercom/sys_audio_to_intercom
+	chown system system /sys/bus/platform/drivers/gpio_ctr_driver/gpio53
+	chown system system /sys/bus/i2c/drivers/bq27541/3-0055/soc
+	chown system system /sys/bus/i2c/drivers/bq27541/3-0055/temperature
+	chown system system /sys/bus/i2c/drivers/bq27541/3-0055/voltage
+	chown system system /sys/bus/i2c/drivers/bq27541/4-0055/soc
+	chown system system /sys/bus/i2c/drivers/bq27541/4-0055/temperature
+	chown system system /sys/bus/i2c/drivers/bq27541/4-0055/voltage
+	chown system system /sys/bus/platform/drivers/ext_key_plat_driver/charger_vol
+	chown system system /sys/bus/i2c/drivers/aw87329/3-0058/protect
+
+	chmod 0666 /sys/bus/platform/drivers/gpio_ctr_driver/gpio2
+	chmod 0666 /sys/bus/platform/drivers/gpio_ctr_driver/gpio3
+	chmod 0666 /sys/bus/platform/drivers/gpio_ctr_driver/gpio4
+	chmod 0664 /sys/bus/platform/drivers/gpio_ctr_driver/gpio13
+	chmod 0664 /sys/bus/platform/drivers/gpio_ctr_driver/gpio17
+	chmod 0664 /sys/bus/platform/drivers/gpio_ctr_driver/gpio19
+	chmod 0777 /sys/bus/platform/drivers/gpio_ctr_driver/gpio20
+	chmod 0664 /sys/bus/platform/drivers/gpio_ctr_driver/gpio26
+	chmod 0664 /sys/bus/platform/drivers/gpio_ctr_driver/gpio52
+	chmod 0664 /sys/bus/platform/drivers/gpio_ctr_driver/gpio54
+	chmod 0664 /sys/bus/platform/drivers/gpio_ctr_driver/gpio68
+	chmod 0666 /sys/bus/platform/drivers/gpio_ctr_driver/gpio69
+	chmod 0664 /sys/bus/platform/drivers/gpio_ctr_driver/gpio74
+	chmod 0664 /sys/bus/platform/drivers/gpio_ctr_driver/gpio77
+	chmod 0664 /sys/bus/platform/drivers/gpio_ctr_driver/gpio78
+	chmod 0664 /sys/bus/platform/drivers/gpio_ctr_driver/gpio85
+	chmod 0664 /sys/bus/platform/drivers/gpio_ctr_driver/gpio86
+	chmod 0664 /sys/bus/platform/drivers/gpio_ctr_driver/gpio87
+	chmod 0666 /sys/bus/platform/drivers/gpio_ctr_driver/gpio88
+	chmod 0777 /sys/bus/platform/drivers/gpio_ctr_driver/gpio150
+	chmod 0666 /sys/bus/platform/drivers/gpio_ctr_driver/gpio153
+	chmod 0666 /sys/bus/platform/drivers/gpio_ctr_driver/gpio159
+	chmod 0777 /sys/bus/platform/drivers/gpio_ctr_driver/gpio160
+	chmod 0777 /sys/bus/platform/drivers/gpio_ctr_driver/gpio165
+	chmod 0777 /sys/bus/platform/drivers/gpio_ctr_driver/gpio169
+	chmod 0666 /sys/bus/platform/drivers/gpio_ctr_driver/gpio163
+	chmod 0666 /sys/bus/platform/drivers/gpio_ctr_driver/gpio164
+	chmod 0666 /sys/bus/platform/drivers/gpio_ctr_driver/gpio166
+	chmod 0666 /sys/bus/platform/drivers/gpio_ctr_driver/gpio152
+	chmod 0666 /sys/bus/platform/drivers/gpio_ctr_driver/gpio80
+	chmod 0777 /sys/bus/platform/drivers/intercom_driver/intercom/mic_power
+	chmod 0777 /sys/bus/platform/drivers/intercom_driver/intercom/sys_audio_to_intercom
+	chmod 0666 /sys/bus/platform/drivers/gpio_ctr_driver/gpio53
+	chmod 0666 /sys/bus/platform/drivers/gpio_ctr_driver/gpio15
+	chmod 0777 /sys/bus/i2c/drivers/bq27541/3-0055/soc
+	chmod 0777 /sys/bus/i2c/drivers/bq27541/3-0055/temperature
+	chmod 0777 /sys/bus/i2c/drivers/bq27541/3-0055/voltage
+	chmod 0777 /sys/bus/i2c/drivers/bq27541/4-0055/soc
+	chmod 0777 /sys/bus/i2c/drivers/bq27541/4-0055/temperature
+	chmod 0777 /sys/bus/i2c/drivers/bq27541/4-0055/voltage
+	chmod 0777 /sys/bus/platform/drivers/ext_key_plat_driver/charger_vol
+	chmod 0777 /sys/bus/i2c/drivers/aw87329/3-0058/protect
+
+	chown root shell /sys/bus/platform/drivers/usb_modem_driver/power_enable
+	chmod 0666 /sys/bus/platform/drivers/usb_modem_driver/power_enable
+	chown system system /sys/devices/platform/mt_usb/otg_status
+	chmod 0666 /sys/devices/platform/mt_usb/otg_status
+	chown system system /sys/bus/platform/drivers/intercom_driver/intercom/ptt_version
+	chmod 0666 /sys/bus/platform/drivers/intercom_driver/intercom/ptt_version
+
+	chown root shell /sys/bus/platform/drivers/usb_modem_driver/power_on
+	chmod 0666 /sys/bus/platform/drivers/usb_modem_driver/power_on
+
+	chown root shell /sys/bus/platform/drivers/usb_modem_driver/hfpwr
+	chmod 0666 /sys/bus/platform/drivers/usb_modem_driver/hfpwr
+
+	chown root shell /sys/bus/platform/drivers/usb_modem_driver/kp_boot
+	chmod 0666 /sys/bus/platform/drivers/usb_modem_driver/kp_boot
+
+	chown root shell /sys/bus/platform/drivers/usb_modem_driver/ap2cp_reset
+	chmod 0666 /sys/bus/platform/drivers/usb_modem_driver/ap2cp_reset
+
+	chown root shell /sys/bus/platform/drivers/usb_modem_driver/ap2cp_sleep
+	chmod 0666 /sys/bus/platform/drivers/usb_modem_driver/ap2cp_sleep
+
+	chown root shell /sys/bus/platform/drivers/usb_modem_driver/ap2cp_wake
+	chmod 0666 /sys/bus/platform/drivers/usb_modem_driver/ap2cp_wake
+
+	chown system system /sys/bus/i2c/drivers/aw87329/3-0058/force_off
+
+    chown system system /sys/bus/i2c/drivers/bq27541/3-0055/reg
+    chmod 0666 /sys/bus/i2c/drivers/bq27541/3-0055/reg
+
+    chown system system /sys/devices/platform/battery/power_supply/battery/voltage_now
+    chmod 0666 /sys/devices/platform/battery/power_supply/battery/voltage_now
+
+    chown system system /sys/class/mtk-adc-cali/mtk-adc-cali/AUXADC_battery_voltage
+    chmod 0666 /sys/class/mtk-adc-cali/mtk-adc-cali/AUXADC_battery_voltage
+
+    chown system system /sys/bus/platform/drivers/intercom_driver/intercom/headset_mic_only
+    chmod 0666 /sys/bus/platform/drivers/intercom_driver/intercom/headset_mic_only
+
+	chmod 0777 /dev/csic722_tf
+	chmod 0777 /dev/jw_tf
+
+    chown system system /sys/bus/platform/drivers/ext_key_plat_driver/channel
+	chmod 0666 /sys/bus/platform/drivers/ext_key_plat_driver/channel
+
+    chown system system /sys/bus/platform/drivers/intercom_driver/intercom/led_r
+	chmod 0666 /sys/bus/platform/drivers/intercom_driver/intercom/led_r
+
+    chown system system /sys/bus/platform/drivers/intercom_driver/intercom/led_g
+	chmod 0666 /sys/bus/platform/drivers/intercom_driver/intercom/led_g
+
+    chown system system /sys/devices/platform/flashlights_mt6370/channel2_en
+	chmod 0666 /sys/devices/platform/flashlights_mt6370/channel2_en
+
+
+#Start[Ink@obnur;20200521]Check intercom version and update firmware
+# service update_wt_fw /system/bin/update_wt_fw
+#     class core
+#     user system
+#     group system shell
+#     oneshot
+#     seclabel u:r:init:s0
+#
+# service Dloader_AMBE /system/bin/Dloader -pac "/system/etc/firmware/intercom/sc6821_ambe.pac" -dev "/dev/ttyS0" -baud 2000000
+#     class core
+#     user root
+#     disabled
+#     oneshot
+#
+# service Dloader_VITAS /system/bin/Dloader -pac "/system/etc/firmware/intercom/sc6821_vitas.pac" -dev "/dev/ttyS0 " -baud 2000000
+#     class core
+#     user root
+#     disabled
+#     oneshot
+#
+# on property:sys.dloader.update.firmware=1
+#     start Dloader_AMBE
+#
+# on property:sys.dloader.update.firmware=2
+#     start Dloader_VITAS
+#End
+

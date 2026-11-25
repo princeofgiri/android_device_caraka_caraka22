@@ -1,0 +1,25 @@
+#
+# System properties for CARAKA-22 (MT6765)
+#
+
+# Telephony
+ro.telephony.default_network=10,10,10,10
+telephony.lteOnCdmaDevice=1
+telephony.active_modems.max_count=2
+ro.telephony.sim.count=2
+persist.radio.multisim.config=dsds
+ro.telephony.iwlan_operation_mode=AP-assisted
+
+# Display & Density
+ro.sf.lcd_density=320
+
+# Audio
+ro.audio.silent=0
+
+# USB / Debugging
+persist.sys.usb.config=adb
+ro.adb.secure=0
+
+# Walkie-Talkie & Intercom
+persist.vendor.radio.intercom=1
+persist.sys.walkietalkie.enable=1

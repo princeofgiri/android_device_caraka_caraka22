@@ -1,0 +1,34 @@
+#
+# Key layout for CARAKA-22 (MT6765 Keypad, PMIC Keys, Walkie-Talkie & Ext Keys)
+# Extracted from stock CARAKA-22 Generic.kl ([Linzq@obnur, 2023-07-03])
+#
+
+key 116   POWER
+key 115   VOLUME_UP
+key 114   VOLUME_DOWN
+key 212   CAMERA
+key 226   HEADSETHOOK
+key 102   HOME
+key 158   BACK
+key 139   MENU
+
+# Dedicated Walkie-Talkie / DMR / Intercom & Special Hardware Keys
+key 300   VIDEO_APP_1       # SOS
+key 301   VIDEO_APP_2       # POC
+key 302   VIDEO_APP_3       # PTT
+key 303   VIDEO_APP_4       # SQ
+key 304   APP_SWITCH        # ET
+key 305   VIDEO_APP_6       # BONE
+key 306   VIDEO_APP_7       # DMR_MESSAGE
+key 307   VIDEO_APP_8       # FLASHLIGHT
+key 308   FEATURED_APP_1    # KNOB
+key 309   FEATURED_APP_2    # AUDIO_EXT
+key 310   FEATURED_APP_3    # VIDEO_EXT
+key 311   FEATURED_APP_4    # POC2
+key 312   DEMO_APP_1        # CHARGE
+key 313   DEMO_APP_2        # CAMERA2
+
+# Channel keys
+key 402   CHANNEL_UP
+key 403   CHANNEL_DOWN
+key 405   LAST_CHANNEL

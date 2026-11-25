@@ -1,0 +1,11 @@
+#
+# Allow system_app (com.android.walkietalkie UID 1000) and platform_app
+# to access Intercom DMR nodes and MicroArray fingerprint service
+#
+
+allow system_app intercom_device:chr_file rw_file_perms;
+allow system_app ttyS_device:chr_file rw_file_perms;
+allow system_app serial_device:chr_file rw_file_perms;
+allow system_app fp_mafp_service:hwservice_manager find;
+
+allow platform_app intercom_device:chr_file rw_file_perms;

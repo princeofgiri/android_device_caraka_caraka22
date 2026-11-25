@@ -1,0 +1,17 @@
+//
+// Copyright (C) 2026 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "libcam_utils_shim",
+    srcs: ["libcam_utils_shim.cpp"],
+    shared_libs: [
+        "libutils",
+        "liblog",
+        "libdl",
+    ],
+    compile_multilib: "64",
+    vendor: true,
+}

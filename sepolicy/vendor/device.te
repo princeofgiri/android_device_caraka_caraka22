@@ -1,0 +1,9 @@
+#
+# Device types and services for CARAKA-22 (MT6765 + MicroArray FP)
+# Note: intercom_device is defined in external/walkie/sepolicy/vendor/file.te
+# Note: ttyS_device is defined in device/mediatek/sepolicy_vndr/base/vendor/device.te
+#
+
+type finger_device, dev_type;
+type fp_mafp_service, hwservice_manager_type;
+type sysfs_knob, fs_type, sysfs_type;

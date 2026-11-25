@@ -1,0 +1,8 @@
+#
+# SELinux File Contexts for CARAKA-22 Hardware Nodes
+# Note: /dev/intercom_device is labeled in external/walkie/sepolicy/vendor/file_contexts
+# Note: /dev/ttyS.* is labeled as ttyS_device in device/mediatek/sepolicy_vndr
+#
+
+/dev/madev0             u:object_r:finger_device:s0
+/(vendor|system/vendor)/bin/hw/vendor\.microarray\.mafp@1\.0-service  u:object_r:hal_fingerprint_default_exec:s0
